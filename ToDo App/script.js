@@ -17,7 +17,7 @@ addButton.onclick = function () {
   }
 };
 
-function addTaskToArray(arrayOfTasks) {
+function addTaskToArray(taskText) {
   const task = {
     id: Date.now(),
     title: taskText,
