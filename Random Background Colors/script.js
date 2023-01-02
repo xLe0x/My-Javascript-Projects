@@ -6,7 +6,7 @@ for (let i = 0; i < 6; i++) {
   hexCode += hexDigits[Math.floor(Math.random() * hexDigits.length)];
 }
 
-document.querySelector("h1").innerHTML += hexCode;
+document.querySelector("h1").innerHTML = `Color is : ${hexCode}`;
 
 document.body.style.backgroundColor = hexCode;
 }
