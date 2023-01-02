@@ -1,0 +1,91 @@
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  font-family: fantasy, sans-serif;
+  background-color: #00000072;
+}
+
+.container {
+  width: 70%;
+  margin-inline: auto;
+  margin-block: 100px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+  .form {
+    flex-direction: column;
+  }
+}
+
+.form input.input-task {
+  flex: 2;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.form input.input-task:focus-visible {
+  outline: none;
+  padding: 4px 8px;
+  border-color: #555;
+}
+
+.form .add-task {
+  flex: 1;
+  border: 2px solid #f32;
+  color: white;
+  background-color: #f32;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.tasks {
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 400px) {
+  .tasks .task {
+    flex-direction: column;
+  }
+  .tasks .task .task-name {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.tasks .task {
+  margin-block: 10px;
+  background-color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.tasks .task .delete {
+  padding: 4px 8px;
+  background-color: #f32;
+  color: white;
+  border: 2px solid #f32;
+  border-radius: 4px;
+  cursor: pointer;
+}

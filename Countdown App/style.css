@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #5896f3,
+    #00b6ff,
+    #00d1f9,
+    #00e6cd,
+    #3df590
+  );
+  position: relative;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  -webkit-box-shadow: 0px 0px 54px 15px rgba(0, 238, 255, 0.8);
+  -moz-box-shadow: 0px 0px 54px 15px rgba(0, 238, 255, 0.8);
+  box-shadow: 0px 0px 54px 15px rgba(0, 238, 255, 0.8);
+  padding: 3rem 5rem;
+  border-radius: 1rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+div {
+  position: relative;
+}
+
+div:not(:last-of-type)::after {
+  content: ":";
+  position: absolute;
+  right: -20px;
+  top: -3px;
+  font-size: 2.5rem;
+}
+
+.till {
+  color: #2024;
+  font-weight: 700;
+  font-size: 4rem;
+  padding-top: 3rem;
+  text-align: center;
+  text-shadow: 0 0 4px currentColor;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}

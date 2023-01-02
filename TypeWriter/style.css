@@ -1,0 +1,41 @@
+:root {
+  --main-color: rgb(255 255 255 / 80%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+  background-color: #333;
+}
+
+p {
+  width: 28ch;
+  border-right: 2px solid var(--main-color);
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 3rem;
+  color: var(--main-color);
+  margin: 20px auto;
+  animation: blink 0.5s infinite alternate, show 7s 1s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: var(--main-color);
+  }
+}
+
+@keyframes show {
+  from {
+    width: 0;
+  }
+  to {
+    width: 28ch;
+  }
+}
