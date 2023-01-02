@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: monospace;
+        min-height: 100vh;
+        background: #ec008c; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #fc6767,
+          #ec008c
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #fc6767,
+          #ec008c
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        text-align: center;
+        box-shadow: white 0 0 36px -28px, #333 0px 0px 36px -28px inset;
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+      }
+      .time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2rem;
+        color: whitesmoke;
+        margin-bottom: 1rem;
+      }
+      span {
+        position: relative;
+      }
+      span:not(:last-child):after {
+        content: ":";
+        position: absolute;
+        top: 0;
+
+        right: -35px;
+      }
+      .btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      button {
+        padding: 4px 10px;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        margin-inline: 10px;
+      }
+      .stop {
+        background-color: #ec008c;
+      }
+      .start {
+        background-color: #ec0008;
+      }
+      .reset {
+        background-color: #00ec76;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="time">
+        <span class="hours">hours</span>
+        <span class="mins">mins</span>
+        <span class="secs">secs</span>
+      </div>
+      <div class="btns">
+        <button class="stop">Stop</button>
+        <button class="start">Start</button>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
