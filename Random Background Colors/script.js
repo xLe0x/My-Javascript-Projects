@@ -10,5 +10,6 @@ function generateColor() {
 
   document.body.style.backgroundColor = hexCode;
 }
-
-setInterval(generateColor, 2000);
+window.onload = function () { 
+  setInterval(generateColor, 1000);
+}
